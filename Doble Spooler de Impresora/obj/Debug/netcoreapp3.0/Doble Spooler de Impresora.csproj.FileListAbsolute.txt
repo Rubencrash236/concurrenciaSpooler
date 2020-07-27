@@ -20,3 +20,8 @@ D:\Programacion\P2\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spoo
 D:\Programacion\P2\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.AssemblyInfo.cs
 D:\Programacion\P2\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.dll
 D:\Programacion\P2\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.pdb
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.csprojAssemblyReference.cache
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.AssemblyInfoInputs.cache
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.AssemblyInfo.cs
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.dll
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.pdb

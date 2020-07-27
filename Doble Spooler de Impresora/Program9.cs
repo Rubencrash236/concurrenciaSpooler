@@ -7,21 +7,26 @@ namespace Doble_Spooler_de_Impresora
 {
     class Program
     {
-        static ArrayList primary;
-        static ArrayList secundary;
+        static Stack primary;
+        static Stack secundary;
 
         static void Main(string[] args)
         {
-            primary = new ArrayList();
-            secundary = new ArrayList();
-            Thread Pspooler = new Thread(getPetitionPrimary);
-            Thread Sspooler = new Thread(getPetitionSecundary);
+            primary = new Stack();
+            secundary = new Stack();
+            Console.WriteLine("Cantidad de impresoras tipo A: ");
+            int typeA = Console.ReadLine();
+            Console.WriteLine("Cantidad de impresoras tipo B: ");
+            int typeB = Console.ReadLine();
+            Thread picker = new Thread(pick);
+            Thread[] Pspooler = new Thread[sizeA](imprimir_A);
+            Thread[] Sspooler = new Thread[sizeB](imprimir_B);
 
             Pspooler.Start();
             Sspooler.Start();
         }
 
-        static void getPetitionPrimary()
+        static void imprimir_A()
         {
             while (true)
             {
@@ -35,14 +40,14 @@ namespace Doble_Spooler_de_Impresora
                     Thread.Sleep(500);
                 }
 
-                Console.Write("spooler 1: " + primary[0] + " \n");
-                primary.RemoveAt(0);
+                Console.Write("spooler 1: " + primary.Pop().ToString() + " \n");
+                
                 Thread.Sleep(500);
             }
             
         }
 
-        static void getPetitionSecundary()
+        static void imprimir_B()
         {
             while (true)
             {
@@ -58,12 +63,17 @@ namespace Doble_Spooler_de_Impresora
             }
         }
 
-        static void createThreads(int sizeA, int sizeB)
+        static void printing()
         {
-            for(int i = 0; i < sizeA; i++)
-            {
 
-            }
+        }
+
+        static void pick()
+        {
+            Console.WriteLine();
+            primary.Push(Console.ReadKey().KeyChar);
+            Console.Clear();
+            Thread.Sleep(10000);
         }
     }
 }
