@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Joseph\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ruben\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Edicion y Programming\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
+      "projectUniqueName": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
       "projectName": "Doble Spooler de Impresora",
-      "projectPath": "D:\\Edicion y Programming\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
-      "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-      "outputPath": "D:\\Edicion y Programming\\concurrenciaSpooler\\Doble Spooler de Impresora\\obj\\",
+      "projectPath": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
+      "packagesPath": "C:\\Users\\ruben\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ruben\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -48,10 +44,21 @@
     "frameworks": {
       "netcoreapp3.0": {
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

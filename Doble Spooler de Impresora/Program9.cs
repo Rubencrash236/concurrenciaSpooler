@@ -16,7 +16,7 @@ namespace Doble_Spooler_de_Impresora
         static void Main(string[] args)
         {
             int typeA, typeB;
-            Thread printing = new Thread(startPrint(works));
+            Thread printing = new Thread(startPrint);
 
             Console.WriteLine("Cantidad de impresoras tipo A: ");
             typeA = Int32.Parse(Console.ReadLine());
@@ -36,7 +36,7 @@ namespace Doble_Spooler_de_Impresora
             ///Agregar trabajo a la queue...tal vez con hilos
             ///Ya la funcion AddWork() está hecha
 
-            printing.start();
+            printing.Start();
  
         }
 
@@ -57,11 +57,18 @@ namespace Doble_Spooler_de_Impresora
             }
         }
         
-        static void startPrint(Queue work)
+        static void startPrint()
         {
             while (true)
             {
-                searchPrinter(work.Dequeue);
+                if (works.Count != 0) 
+                {
+                    searchPrinter((Work)works.Dequeue());
+                }
+                else
+                {
+                    continue;
+                }
             }
         }
 

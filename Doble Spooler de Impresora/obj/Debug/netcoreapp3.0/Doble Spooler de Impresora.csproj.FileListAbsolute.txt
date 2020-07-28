@@ -25,3 +25,9 @@ C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\o
 C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.AssemblyInfo.cs
 C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.dll
 C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\obj\Debug\netcoreapp3.0\Doble Spooler de Impresora.pdb
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.exe
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.deps.json
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.runtimeconfig.json
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.runtimeconfig.dev.json
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.dll
+C:\Users\ruben\Documents\GitHub\concurrenciaSpooler\Doble Spooler de Impresora\bin\Debug\netcoreapp3.0\Doble Spooler de Impresora.pdb
