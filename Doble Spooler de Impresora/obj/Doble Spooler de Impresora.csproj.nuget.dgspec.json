@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programacion\\P2\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj": {}
+    "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj": {}
   },
   "projects": {
-    "D:\\Programacion\\P2\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj": {
+    "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programacion\\P2\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
+        "projectUniqueName": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
         "projectName": "Doble Spooler de Impresora",
-        "projectPath": "D:\\Programacion\\P2\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
+        "projectPath": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\Doble Spooler de Impresora.csproj",
         "packagesPath": "C:\\Users\\ruben\\.nuget\\packages\\",
-        "outputPath": "D:\\Programacion\\P2\\Doble Spooler de Impresora\\obj\\",
+        "outputPath": "C:\\Users\\ruben\\Documents\\GitHub\\concurrenciaSpooler\\Doble Spooler de Impresora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruben\\AppData\\Roaming\\NuGet\\NuGet.Config",
