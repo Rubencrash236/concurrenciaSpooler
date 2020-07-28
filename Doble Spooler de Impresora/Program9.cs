@@ -17,11 +17,14 @@ namespace Doble_Spooler_de_Impresora
         {
             int typeA, typeB;
             Thread printing = new Thread(startPrint);
+            Thread worker = new Thread(workGenerator);
 
             Console.WriteLine("Cantidad de impresoras tipo A: ");
             typeA = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Cantidad de impresoras tipo B: ");
             typeB = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            worker.Start();
             printers = new Printer[typeA + typeB];
 
             for(int i = 0; i < typeA; i++)
@@ -47,11 +50,13 @@ namespace Doble_Spooler_de_Impresora
             {
                 foreach (Printer printer in printers)
                 {
-                    if (printer.ready && (printer.type == myWork.type || myWork.type == 3))
+                    if (myWork != null && printer.ready && (printer.type == myWork.type || myWork.type == 3))
                     {
                         printer.myWork = myWork;
-                        printer.print.Start();
-                       
+                        myWork = null;
+                        printer.printing = true;
+                        printer.startPrint();
+                        break;
                     }
                 }
             }
@@ -69,6 +74,24 @@ namespace Doble_Spooler_de_Impresora
                 {
                     continue;
                 }
+            }
+        }
+
+        static void workGenerator()
+        {
+            Work work = new Work(4, null);
+            while (true)
+            {
+                Console.SetCursorPosition(50, 2);
+                Console.WriteLine("Tipo de trabajo: TipoA(1), TipoB(2), TipoC(3) : ");
+                Console.SetCursorPosition(50, 3);
+                work.type = Int32.Parse(Console.ReadLine());
+                Console.SetCursorPosition(50, 4);
+                Console.WriteLine("Mensaje: ");
+                Console.SetCursorPosition(50,5);
+                work.work = Console.ReadLine();
+                addWork(work);
+                work = null;
             }
         }
 
