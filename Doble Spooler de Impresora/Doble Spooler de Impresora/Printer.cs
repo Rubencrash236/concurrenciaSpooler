@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace Doble_Spooler_de_Impresora
@@ -22,27 +23,19 @@ namespace Doble_Spooler_de_Impresora
         }
 
         public void startPrint()
-        {   
+        {
             this.ready = false;
             if (this.printing && !this.ready)
             {
-                if (this.type == 1)
-                {
-                    Console.SetCursorPosition(1,4);
-                    Console.WriteLine("Printer tipo A: ");
-                }
-                else
-                {
-                    Console.SetCursorPosition(1, 8);
-                    Console.WriteLine("Printer tipo B: ");
-                }
-                Console.WriteLine(this.myWork.work);
-                
+
+                Thread.Sleep(1000);
                 this.printing = false;
                 
             }
-            
+           
+
             this.ready = true;
+            
         }
 
     }
