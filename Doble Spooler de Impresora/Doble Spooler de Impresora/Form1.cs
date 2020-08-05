@@ -15,7 +15,7 @@ namespace Doble_Spooler_de_Impresora
     public partial class Form1 : Form
     {
         private int typeA, typeB, num;
-        
+        static int[] queueSize = { 0, 0, 0 };
         static Queue<Work> works = new Queue<Work>();
         static Printer[] printers;
         public Button[] btn;
@@ -188,10 +188,19 @@ namespace Doble_Spooler_de_Impresora
            
             if(txtmensaje.Text.Length > 2 && CBXTipotrabajo.SelectedIndex > 0)
             {
-                   worker = new Thread(workGenerator);
-                   printing = new Thread(startPrint);
-                   worker.Start();
-                   printing.Start();
+                try
+                {
+                    worker = new Thread(workGenerator);
+                    printing = new Thread(startPrint);
+                    worker.Start();
+                    printing.Start();
+
+                }
+                catch (BigQueueException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+                  
 
             }
         }
@@ -215,27 +224,40 @@ namespace Doble_Spooler_de_Impresora
         public void workGenerator()
         {
             Work work = new Work(4, null);
-            
-                work = new Work(4, null);
-                work.type = num;
-                work.work = txtmensaje.Text;
-                
-                //addWork(work);
-                if(work.type != 4)
+            work = new Work(4, null);
+            work.type = num;
+            work.work = txtmensaje.Text;
+            //addWork(work);
+           
+            if (work.type != 4)
+            {
+                ///EXCEPCION
+                if(queueSize[work.type] < 20)
                 {
                     works.Enqueue(work);
+                    queueSize[num]++;
                     work = null;
+
                 }
-               
+                else
+                {
+                    throw new BigQueueException("La cola de tipo " + work.type + "ha llegado a 20");
+                }
+                
+            }
         }
 
         public void startPrint()
         {
+            Work myWork;
             while (true)
             {
                 if (works.Count > 0 )
                 {
-                    searchPrinter(works.Dequeue());
+                    myWork = works.Dequeue();
+                    searchPrinter(myWork);
+                    queueSize[myWork.type]--;
+                    
                 }
                 else
                 {
