@@ -232,16 +232,16 @@ namespace Doble_Spooler_de_Impresora
             if (work.type != 4)
             {
                 ///EXCEPCION
-                if(queueSize[work.type] < 20)
+                if(queueSize[work.type - 1] < 20)
                 {
                     works.Enqueue(work);
-                    queueSize[num]++;
+                    queueSize[num - 1]++;
                     work = null;
 
                 }
                 else
                 {
-                    throw new BigQueueException("La cola de tipo " + work.type + "ha llegado a 20");
+                    throw new BigQueueException("La cola de tipo " + (work.type - 1) + "ha llegado a 20");
                 }
                 
             }
@@ -256,7 +256,7 @@ namespace Doble_Spooler_de_Impresora
                 {
                     myWork = works.Dequeue();
                     searchPrinter(myWork);
-                    queueSize[myWork.type]--;
+                    queueSize[myWork.type - 1]--;
                     
                 }
                 else
